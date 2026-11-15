@@ -21,7 +21,7 @@ env:
   ECS_CLUSTER: ecs-learning-cluster
   ECS_SERVICE: ecs-tasks-service
   ECS_TASK_FAMILY: ecs-tasks-task
-  CONTAINER_NAME: ecs-tasks-container
+  CONTAINER_NAME: tasks-api-container
 
 jobs:
   deploy:
