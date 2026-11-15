@@ -26,6 +26,10 @@ export class AppController {
     return this.appService.getTasks();
   }
 
+  getHello() {
+    return "Hello World!"
+  }
+
   @Post('tasks')
   createTask(@Body('title') title: unknown) {
     if (typeof title !== 'string' || !title.trim()) {
