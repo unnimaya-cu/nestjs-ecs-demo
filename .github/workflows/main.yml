@@ -56,7 +56,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6.3.0
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_TO_ASSUME }}
+          # Use this account's deployment role when the repository variable is unset.
+          role-to-assume: ${{ vars.AWS_ROLE_TO_ASSUME || 'arn:aws:iam::594532711226:role/github-actions-ecs-deploy-role' }}
           aws-region: ${{ env.AWS_REGION }}
 
       # Step 7: Log in to ECR
