@@ -17,11 +17,11 @@ concurrency:
 
 env:
   AWS_REGION: ap-south-1
-  ECR_REPOSITORY: nestjs-ecs-demo
-  ECS_CLUSTER: nestjs-demo-cluster
-  ECS_SERVICE: nestjs-demo-service
-  ECS_TASK_FAMILY: nestjs-demo-task
-  CONTAINER_NAME: nestjs-container
+  ECR_REPOSITORY: ecs-tasks-api
+  ECS_CLUSTER: ecs-learning-cluster
+  ECS_SERVICE: ecs-tasks-service
+  ECS_TASK_FAMILY: ecs-tasks-task
+  CONTAINER_NAME: ecs-tasks-container
 
 jobs:
   deploy:
